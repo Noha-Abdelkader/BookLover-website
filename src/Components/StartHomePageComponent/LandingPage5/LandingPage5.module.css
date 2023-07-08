@@ -1,0 +1,40 @@
+.shopAllBtn{
+    position:relative;
+    z-index:10;
+ }
+ .shopAllBtn::after{
+    content:'';
+    display:inine-block;
+    top:0;
+    bottom:0;
+    right:0%;
+    width:30%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+    position:absolute;
+z-index:1;
+ }
+/* =========================================== */
+
+.moveBg{
+    animation-name: scale;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+}
+@keyframes scale{
+0%{transform: translateY(0);}
+50%{transform: translateY(1%);}
+100%{transform: translateY(0);}
+}
+
+.scaleBg{
+    animation-name:move;
+    animation-duration:4s;
+    animation-iteration-count:1;   
+}
+
+@keyframes move{
+    0%{transform: scale(1.1);}
+    50%{transform: scale(1);}
+    100%{transform: scale(1);}
+    }

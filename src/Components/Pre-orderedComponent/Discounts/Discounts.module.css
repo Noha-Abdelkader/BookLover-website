@@ -1,0 +1,74 @@
+.icon{
+    transition:all 0.5s;
+}
+.icon:hover{
+    color:pink;
+
+}
+
+/* =========================== */
+.layer{
+transition: all 0.5s;
+opacity:0;
+
+}
+
+.imgParent:hover .layer{
+opacity:1;
+}
+.imgParent svg{
+    position:relative;
+  top:100%;
+  
+}
+.imgParent:hover svg{
+top:0%;
+}
+
+.imgParent svg:nth-child(1){
+    transition:all 0.5s 0s;
+}
+.imgParent svg:nth-child(2){
+     transition:all 0.5s 0.3s;
+}
+.imgParent svg:nth-child(3){
+     transition:all 0.5s 0.6s;
+}
+.imgParent svg:nth-child(4){
+     transition:all 0.5s 0.8s;
+}
+.head{
+    position:relative;
+}
+.head::after {
+    content:'';
+    display:inline-block;
+    position:absolute;
+    z-index:1;
+    width:80%;
+    height:1px;
+    background-color:black;
+    bottom:-100%;
+    left:50%;
+    transform:translate(-50%, 0%);
+}
+ .head::before{
+    content:'check now';
+    display:inline-block;
+    font-size:1.4rem;
+    position:absolute;
+    z-index:10;
+    width:50%;
+    color:orange;
+    background-color:white;
+    bottom:-150%;
+    right:50%;
+    transform:translate(50%, 0%);
+    border:1px solid black;
+    border-radius:2px;
+ }
+ /* @mediascreen and (max-width:640px){
+    #root > div > div:nth-child(7) > h5::before{
+    width:60% !important; 
+ }
+ } */

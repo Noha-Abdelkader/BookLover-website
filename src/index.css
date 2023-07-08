@@ -1,13 +1,210 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ---------- tailwind ------------------ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ------ font style ------------------ */
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); */
+/*@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marcellus+SC&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Marcellus+SC&display=swap');
+/* --------- global style --------------------- */
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  text-transform:none;
+}
+:root{
+  --mainColor:rgb(41, 133, 133);
+  --amberColor: rgb(180 83 9);
+  //--swiper-theme-color:orange !important;
+}
+body{
+  /*font-family:'Marcellus SC', 'Cormorant Garamond', serif;*/
+  /*font-family: 'Indie Flower', cursive;*/
+  font-family: 'Courgette', cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::selection{
+  background-color:var(--amberColor);;
+  color:white;
 }
+
+/* ------- swiper ---------------------------- */
+#root div.swiper > div.swiper-pagination >span{
+padding:0.4rem !important;
+background-color:orange;
+}
+
+div.swiper > div.swiper-button-prev::after,
+div.swiper > div.swiper-button-next::after{
+  font-weight:900;
+  color : orange !important;
+  display:none;
+
+}
+
+#root div.swiper > div.swiper-pagination >span
+{
+  padding:0.5rem;
+
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide {
+  /* text-align: center;
+  font-size: 18px;
+  background: #fff; */
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-position: center;
+  background-size: cover;
+  
+}
+
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+div.swiper div.autoplay-progress,
+  div.swiper div.autoplay-progress svg {
+    stroke:orange;
+  color:orange;
+}
+.swiper-pagination.swiper-pagination-fraction{
+  bottom:0%
+}
+
+
+/* ---- react gallery -------------------- */
+
+/* .mySwiper .swiper-slide{
+  opacity:1;
+}
+
+.image-gallery button.image-gallery-icon svg , .image-gallery-slide.center > img{
+width:50%;
+margin:auto;
+} */
+
+/* #root > div > div.text-white.bg-gray-800.p-10.flex.justify-center.items-center.flex-wrap.md\:flex-nowrap > div.w-full.md\:w-1\/2.overflow-hidden.h-auto > div > div.swiper-wrapper > div.swiper-slide */
+
+//--- loader--------------------------------
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.wave {
+  width: 6px;
+  height: 50px;
+  background: linear-gradient(45deg, #fde68a , #f59e0b);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+  display:inline-block;
+  
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+

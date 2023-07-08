@@ -1,0 +1,6 @@
+.bgScale > img{
+    transition:all 1s;
+}
+    .bgScale:hover img{
+        transform: scale(1.1);
+    }

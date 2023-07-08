@@ -1,0 +1,25 @@
+.bookTok{
+position:relative;
+z-index:1;
+overflow:hidden;
+}
+
+.bookTok:before{
+content:'';
+background-color:#ffedd5;
+display:inline-block;
+position:absolute;
+right:-100%;
+top:-50%;
+width:200%;
+height:250%;
+z-index:-1;
+transform:rotate(-45deg);
+}
+@mediascreen and (max-width:600px){
+.bookTok:before{
+    right:50%;
+top:-50%;
+width:150%;
+height:250%;}
+}

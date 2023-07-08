@@ -1,0 +1,24 @@
+
+
+.cardB_layer{
+    transition:all 0.5s;
+}
+.card_img:hover .cardB_layer{
+bottom:0;
+    
+}
+
+.card_img .card_favIcon , .card_img .card_commentIcon{
+   opacity:0;
+    transition:all 0.7s;
+}
+
+.card_img:hover .card_favIcon  , .card_img:hover .card_commentIcon{
+opacity:1;
+}
+
+@mediascreen and (min-width:640px) and (max-width:900px){
+    .card_img{
+width:50%!important;
+}
+}

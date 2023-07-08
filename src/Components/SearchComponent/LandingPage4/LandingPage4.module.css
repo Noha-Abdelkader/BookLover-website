@@ -1,0 +1,46 @@
+.shopAllBtn{
+    
+    position:relative;
+    z-index:10;
+
+ }
+ .shopAllBtn::after{
+    content:'';
+    display:inine-block;
+    top:0;
+    bottom:0;
+    right:0%;
+    width:30%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+    position:absolute;
+z-index:1;
+ }
+/* -------------------------------------- */
+.posterFooter{
+    position:relative;
+    padding:0.5rem;
+}
+.posterFooter:not(:last-child)::after{
+    content:'';
+    display:inline-block;
+    background-color:rgba(0,0,0,0.2);
+    width:1%;
+    height:70%;
+    margin:auto;
+    position:absolute;
+    right:0%
+
+}
+/* ------------------------------------------ */
+.posterDisc{
+    animation-name : scale;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes scale{
+    0%{padding-block:1.8rem; }
+    50%{padding-block:2rem; }
+    100%{padding-block:1.8rem;  }
+}

@@ -1,0 +1,18 @@
+.shopAllBtn{
+    
+    position:relative;
+    z-index:10;
+
+ }
+ .shopAllBtn::after{
+    content:'';
+    display:inine-block;
+    top:0;
+    bottom:0;
+    right:0%;
+    width:30%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+    position:absolute;
+z-index:1;
+ }
