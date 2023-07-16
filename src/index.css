@@ -5,10 +5,12 @@
 
 
 /* ------ font style ------------------ */
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); */
-/*@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marcellus+SC&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Marcellus+SC&display=swap');
+
+
+
+
+ 
 /* --------- global style --------------------- */
 *{
   padding:0;
@@ -19,11 +21,9 @@
 :root{
   --mainColor:rgb(41, 133, 133);
   --amberColor: rgb(180 83 9);
-  //--swiper-theme-color:orange !important;
+  --swiper-theme-color:orange !important;
 }
 body{
-  /*font-family:'Marcellus SC', 'Cormorant Garamond', serif;*/
-  /*font-family: 'Indie Flower', cursive;*/
   font-family: 'Courgette', cursive;
 }
 
@@ -138,7 +138,7 @@ margin:auto;
 
 /* #root > div > div.text-white.bg-gray-800.p-10.flex.justify-center.items-center.flex-wrap.md\:flex-nowrap > div.w-full.md\:w-1\/2.overflow-hidden.h-auto > div > div.swiper-wrapper > div.swiper-slide */
 
-//--- loader--------------------------------
+/* --- loader-------------------------------- */
 .center {
   display: flex;
   justify-content: center;

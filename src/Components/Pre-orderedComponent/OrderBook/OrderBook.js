@@ -7,11 +7,9 @@ import Magazines from '../Magazines/Magazines';
 
 export default function OrderBook() {
   return <Fragment>
-<Discounts/>
-
-    <OnlineBook/>
-    <PreorderBooks/>
-    <Magazines/>
-    
-  </Fragment>
+            <Discounts/>
+            <OnlineBook/>
+            <PreorderBooks/>
+            <Magazines/>
+          </Fragment>
 }

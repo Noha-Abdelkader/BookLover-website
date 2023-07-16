@@ -10,7 +10,7 @@ export default function MonthBookCard({book }) {
 
 //--------------------
 return <Fragment>
- <div className="w-1/2 relative translate-x-1/2 translate-y-4 z-20 shadow-lg shadow-slate-500 rounded-md">
+ <div className="w-1/2 relative translate-x-1/2 translate-y-4 z-20 shadow-lg shadow-slate-500 rounded-md ">
               <CardContentLeft src={book.formats["text/html"]} preview={book.formats['image/jpeg']}  />
               </div>
 

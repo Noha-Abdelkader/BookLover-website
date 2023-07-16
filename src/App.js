@@ -31,15 +31,15 @@ export default function App() {
     <Route path='/' element={<StartHomePage/>}></Route>
     <Route path='*' element={<StartHomePage/>}></Route>
     <Route path='/StartHomePage' element={<StartHomePage/>}></Route>
-    <Route path='/Home' element={ <Home/>}></Route>
+    {/* <Route path='/Home' element={ <Home/>}></Route> */}
     <Route path='/orderBook' element={<OrderBook/>}></Route>
-    <Route path='/search' element={<Search/>}></Route>
+    {/* <Route path='/search' element={<Search/>}></Route> */}
 
 
-    <Route path='/BookOfMonth' element={<BookOfMonth/>}></Route>
-    <Route path='/BestSellers' element={ <BestSellersCards/>}></Route>
-    <Route path='/Author' element={<Author/>}></Route>
-    <Route path='/Reviews' element={<Reviews/>}></Route>
+    {/* <Route path='/BookOfMonth' element={<BookOfMonth/>}></Route> */}
+    {/* <Route path='/BestSellers' element={ <BestSellersCards/>}></Route> */}
+    {/* <Route path='/Author' element={<Author/>}></Route> */}
+    {/* <Route path='/Reviews' element={<Reviews/>}></Route> */}
     
     </Routes>
 

@@ -8,15 +8,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay } from "swiper";
 
 
 export default function MonthBookCards({isLoading , books }) {
-  
   
   return (
     <Fragment>
@@ -36,44 +33,31 @@ export default function MonthBookCards({isLoading , books }) {
         </div>
 
         <Swiper
-        spaceBetween={10}
+        spaceBetween={30}
         centeredSlides={false}
         autoplay={{
-          delay: 3000,
+          delay: 1100,
           disableOnInteraction: false,
         }}
         breakpoints={{
-            "@0.00": {
+            "0": {
             slidesPerView: 1,
-        spaceBetween:30
-
           },
-            "@0.80": {
+            '500': {
             slidesPerView: 2,
-        spaceBetween:30
-
           },
-          "@1.0": {
+          "700": {
             slidesPerView: 3,
-        spaceBetween:30
-
           },
-          "@1.50": {
-            slidesPerView: 5,
-        spaceBetween:30
-
+          "900": {
+            slidesPerView: 4,
           },
-          "@2.0": {
+          "1200": {
             slidesPerView: 6,
-        spaceBetween:30
-
           }
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        
+        modules={[Autoplay]}
         className="mySwiper  "
       >
       
@@ -94,7 +78,7 @@ export default function MonthBookCards({isLoading , books }) {
 
 </div> : books? books.map((book)=>{
   return <SwiperSlide key={book.id}  >
-  <MonthBookCard  book={book}  />
+  <MonthBookCard  book={book} />
         </SwiperSlide>;
 }):<Fragment>
         <div className='bg-orange-50 text-center rounded-md'>

@@ -7,16 +7,18 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./Store";
 import { BrowserRouter } from "react-router-dom";
-
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
+import { bookApi, magazineApi } from "./Store/Api";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
-        <App />
+      <Provider  store={store}  >/
+        <ApiProvider api={magazineApi}>
+          <App />
+        </ApiProvider>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
