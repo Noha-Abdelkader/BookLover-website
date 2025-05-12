@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 // background-image: linear-gradient(to right bottom, #ffedd5, #fed8ac, #fdc284, #fcab5f, #fb923c);
 
@@ -19,7 +19,7 @@ import { FaBook } from "react-icons/fa";
 
 
 
-export default function BookTok({books, isLoading ,error }) {
+export default function BookTok({books, isLoading  }) {
  
  
  return <Fragment> 
@@ -88,19 +88,14 @@ export default function BookTok({books, isLoading ,error }) {
             slidesPerView: 6,
           },
         }}
-        pagination={{
-          clickable: true,
-        }}
+       
         navigation={true}
-        modules={[ Autoplay ,Pagination, Navigation]}
-        className="mySwiper  min-h-[300px] max-h-[350px] "
+        modules={[ Autoplay, Navigation]}
+        className="mySwiper"
       >
       {books ? books.map((book) => {
-  return <SwiperSlide key={book.id} >
-  <div className='mb-0' >
-  <CardContentLeft src={book.formats["text/html"]} preview={book.formats['image/jpeg']} />
-  </div>
-
+  return <SwiperSlide key={book.id}  className=' sm:min-w-[175px] sm:max-w-[175px]  '>
+          <CardContentLeft src={book.formats["text/html"]} preview={book.formats['image/jpeg']} />
         </SwiperSlide>}) :<Fragment>
         <div className='bg-orange-50 text-center rounded-md'>
         <p className='text-2xl font-black text-red-800  p-5'>There is No book</p>
@@ -117,3 +112,6 @@ export default function BookTok({books, isLoading ,error }) {
 
   </Fragment>
 }
+
+
+// min-h-[300px] max-h-[350px]

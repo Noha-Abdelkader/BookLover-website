@@ -37,6 +37,7 @@ const fetchBooks = async()=>{
 // ======= useEffect ===================
 useEffect(()=>{
 fetchBooks();
+
 } , [])
 
 
@@ -49,7 +50,6 @@ fetchBooks();
     <LandingPage2/>
     <MonthBookCards books={books} isLoading={isLoading}  />
     <LandingPage3/>
-
   </Fragment>
 }
 

@@ -27,24 +27,16 @@ export const {useGetBooksMutation} = bookApi;
 
 export const magazineApi = createApi({
     reducerPath:'getMagazineList',
-    // baseQuery:fetchBaseQuery({baseUrl:'https://www.googleapis.com'}),
-    // endpoints:(builder)=>({
-    //     getMagazine:builder.mutation({
-    //         query:()=>({
-    //             url:'/books/v1/volumes?q=time&printType=magazines&key=AIzaSyAlL8IayhadzDoPiQsSev9wK3PsNeh8ZDA',
-    //             method:'GET'
-    //         })
-    //     })
-    // })
-    baseQuery:fetchBaseQuery({baseUrl:'http://gutendex.com/'}),
+    baseQuery:fetchBaseQuery({baseUrl:'https://www.googleapis.com'}),
     endpoints:(builder)=>({
         getMagazine:builder.mutation({
             query:()=>({
-                url:'/books?copyright=true,false',
+                url:'/books/v1/volumes?q=time&printType=magazines&key=AIzaSyAlL8IayhadzDoPiQsSev9wK3PsNeh8ZDA',
                 method:'GET'
             })
         })
     })
+   
 })
 
 export const {useGetMagazineMutation} = magazineApi;

@@ -16,9 +16,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider  store={store}  >/
-        <ApiProvider api={magazineApi}>
+        {/* <ApiProvider api={magazineApi}> */}
           <App />
-        </ApiProvider>
+        {/* </ApiProvider> */}
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

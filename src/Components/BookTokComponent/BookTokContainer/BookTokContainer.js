@@ -1,35 +1,41 @@
-// import React, { Fragment, useEffect } from "react";
-// import BookTok from "../BookTok/BookTok";
-// import LandingPage7 from "../../BookTokComponent/LandingPage7/LandingPage7";
+import React, { Fragment, useEffect, useState } from "react";
+import BookTok from "../BookTok/BookTok";
+import LandingPage7 from "../../BookTokComponent/LandingPage7/LandingPage7";
 // import { useDispatch, useSelector } from "react-redux";
 // import { bookApi, getBooks, useGetBooksQuery } from "../../../Store/bookSlice";
-// import BookContainer from "../Favorite/BookContainer/BookContainer";
+import BookContainer from "../Favorite/BookContainer/BookContainer";
+import { useGetBooksMutation } from "../../../Store/Api";
 
 
-// export default function BookOfMonth() {
-//   // ---------- get init State from bookSlice-----------
-//   // const isLoading = useSelector(state=>state.bookSlice.isLoading);
-//   const books = useSelector(state=>state.bookSlice.books).slice(1);
+export default function BookTokContainer() {
 
-//   const [getBooks , {isLoading:isGettingBooks}] = useGetBooksQuery();
-// //-------- dispatch --------------
-//   // const dispatch = useDispatch();
+    let [books , setBooks]= useState([]);
+    const [getBooks , {isLoading}] = useGetBooksMutation();
 
-//   const 
-//   useEffect(()=>{
 
-//   })
-  
+//==== fetch data ============================
+const fetchBooks = async()=>{
+    try{
+        let response = await getBooks();
+       setBooks(response.data.results);
 
-//   // useEffect(() => {
-//     // dispatch(getBooks());
-//   // }, [dispatch]);
+    }catch(err){
+        console.log(err);
+    }
+};
 
-//   return (
-//     <Fragment>
-//       <BookTok isLoading={isLoading} books={books}/>
-//       <LandingPage7 />
-//       <BookContainer books={books} isLoading={isLoading}/>
-//     </Fragment>
-//   );
-// }
+//======= useEffect =========================
+useEffect(()=>{
+fetchBooks();
+},[]);
+
+//======= return =========================
+
+  return (
+    <Fragment>
+      <BookTok isLoading={isLoading} books={books.slice(0,15)}/>
+      <LandingPage7 />
+      <BookContainer books={books} isLoading={isLoading}/>
+    </Fragment>
+  );
+}

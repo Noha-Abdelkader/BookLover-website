@@ -48,9 +48,9 @@ export default function Soical() {
                   }}
 
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
-        modules={[FreeMode, Pagination , Autoplay]}
+        modules={[FreeMode , Autoplay]}
         className="mySwiper mb-10 "
       >
 
@@ -106,10 +106,10 @@ export default function Soical() {
         }}
 
         pagination={{
-          clickable: true,
+          clickable: false,
           hiddenClass:false,
         }}
-        modules={[FreeMode, Pagination , Autoplay]}
+        modules={[FreeMode , Autoplay]}
         className="mySwiper mb-14"
       >
 

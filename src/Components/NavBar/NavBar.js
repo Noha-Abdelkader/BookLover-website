@@ -5,12 +5,10 @@ import logo from "../Images/images (1).png";
 import styles from "./NavBar.module.css";
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-
 
 
 const navigation = [
-  { name: 'BookTok', to:'BookOfMonth', current: true },
+  { name: 'BookTok', to:'BookTok', current: true },
   { name: 'Author', to: 'Author', current: false },
   { name: 'Reviews', to: 'Reviews', current: false },
 ]
@@ -19,14 +17,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
-  // const data = useSelector(state => state.authSllice.data);
-  // const status = useSelector(state => state.authSllice.status);
-
-  // console.log(data, status);
-
-  // const dispatch = useDispatch();
-  // useEffect (()=>{})
+export default function NavBar() {
+ 
 
 
 return (
